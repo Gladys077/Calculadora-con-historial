@@ -1,0 +1,128 @@
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: aquamarine;
+    font-family: 'Calculator', Roboto, sans-serif;
+}
+.calculator-container {
+    display: grid;
+    max-width: 700px;
+    height: 500px;
+    background-color: rgb(113, 112, 115);
+    margin: auto;
+    border-radius: 15px;
+    grid-template-rows: 1.25fr 5fr;
+    outline: 6px solid rgb(19, 20, 19);
+}
+.cabecera {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.display-container {
+    background-color: rgb(43,44,43);
+    border: 6px ridge green;
+    height: 75%;
+    width: 88%;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#display {
+    background-color: transparent;
+    color: greenyellow;
+    width: 400%;
+    height: 100%;
+    float: right;
+    font-family: 'Calculator', Bahianita-regular, Roboto, sans-serif;
+    font-size: 49px;
+    text-align: right;
+    border: none;
+    overflow: hidden;
+}
+.botonera-historial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    margin-left: 40px;;
+    gap:15px
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding-bottom: 7px;
+    margin: 2px;
+}
+.C {
+    display: grid;
+    grid-column: 1 / 3;
+    background-color: rgb(32, 90, 4);
+    color: white;
+}
+.signoIgual {
+    display: grid;
+    grid-column: 3 / 5;
+    background-color: rgb(32, 90, 4);
+    color: white;
+}
+.botonera button {
+    font-size: 35px;
+    border-radius: 15px;
+    border: 10px outset black;
+}
+button{
+    background-color: whitesmoke;
+    box-shadow:5px 5px 5px 1px black;
+}
+button:active{
+    transform: scale(90%);
+}
+.operaciones {
+    background-color: rgb(68, 185, 10);
+    color: white;
+    font-weight: 700;
+}
+.noNumeros {
+    background-color: rgb(32, 90, 4);
+    color: white;
+}
+
+.historial {
+    display: grid;
+    width: 88%;
+    height: 90%;
+    border: 10px ridge rgb(32, 90, 4);
+    background-color: rgb(43,44,43);
+    border-radius: 15px;
+}
+.historialContenido {
+    overflow: auto;
+    width: 17em;
+    height: 20em;
+}
+.historialContenido::-webkit-scrollbar-thumb {
+    background: rgba(68, 185, 10); 
+    border-radius: 10px;
+}
+.historialContenido::-webkit-scrollbar {
+    width: 10px;
+}
+li {
+    color:rgb(181,244,88);
+    text-align: right;
+    margin-right: 5px;
+    padding-top: 7px
+}
+.historial-resultado {
+    font-size: 1.5em;
+}
+
+

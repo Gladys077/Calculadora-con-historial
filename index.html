@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.0/math.min.js"></script>
+    <title>Calculadora con Grid</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="cabecera">
+            <div class="display-container" contenteditable="true">
+            <textarea contenteditable="true" id="display" rows="1"></textarea>
+            </div>
+        </div>
+        <div class="botonera-historial">
+            <div class="botonera">
+                <div class="row">
+                <button type="reset" class="noNumeros C" onclick="borraTodo()"><b></b>C</b></button>
+                <button type="button" class="noNumeros" onclick="borraUnoPorVez()"><b>←</b></button>
+                <button type="button" class="operaciones" onclick="agregarAPantalla('/')"><b>/</b></button>
+                </div>
+                
+                <div class="row">
+                <button onclick="agregarAPantalla(7)">7</button>
+                <button onclick="agregarAPantalla(8)">8</button>
+                <button onclick="agregarAPantalla(9)">9</button>
+                <button class="operaciones" onclick="agregarAPantalla('+')">+</button>
+                </div>
+                
+                <div class="row">
+                <button type="button" onclick="agregarAPantalla(4)">4</button>
+                <button type="button" onclick="agregarAPantalla(5)">5</button>
+                <button type="button" onclick="agregarAPantalla(6)">6</button>
+                <button type="button" class="operaciones" onclick="agregarAPantalla('-')">-</button>
+                </div>
+                
+                <div class="row">
+                <button type="button" onclick="agregarAPantalla(1)">1</button>
+                <button type="button" onclick="agregarAPantalla(2)">2</button>
+                <button type="button" onclick="agregarAPantalla(3)">3</button>
+                <button type="button" class="operaciones" onclick="agregarAPantalla('*')">x</button>
+                </div>
+                
+                <div class="row">
+                <button type="button" onclick="agregarAPantalla(0)">0</button>
+                <button type="button" onclick="agregarAPantalla('.')">.</button>
+                <button type="button" class="signoIgual" onclick="ejecutar()">=</button>
+                </div>
+            </div>
+            <div class="historial">
+                <div class="historialContenido">
+                    <ul class="historialList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
